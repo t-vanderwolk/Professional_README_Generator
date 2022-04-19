@@ -63,7 +63,36 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(input) {
+    let readMeText = `# ${input.title}
+##Table of Contents 
+[Description](#description)
+[Installation](#installation)
+[Usage](#usage)
+[License](#license)
+[Contributing](#contributing)
+[Testing](#testing)
+[Questions](#questions)
+## Description 
+${input.description}
+## Installation 
+${input.installation}
+## Usage
+${input.usage}
+## License
+${input.license}
+## Contributing
+${input.contributions}
+## Testing
+${input.test}
+## Questions 
+(${input.github})
+${input.email}`
+
+    console.log(readMeText)
+
+}
+
 
 // TODO: Create a function to initialize app
 function init() {}
