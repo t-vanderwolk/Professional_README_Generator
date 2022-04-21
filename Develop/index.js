@@ -28,11 +28,7 @@ const questions = [
         name: 'usage',
         message: 'How is your software used?'
     },
-    {
-        type: 'input',
-        name: 'usage',
-        message: 'How is your software used?'
-    },
+
     {
         type: 'list',
         name: 'license',
@@ -95,7 +91,15 @@ ${input.email}`
 
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer.prompt(questions)
+        .then((answers) => {
+            writeToFile(answers)
+
+        })
+
+}
+
 
 // Function call to initialize app
 init();
